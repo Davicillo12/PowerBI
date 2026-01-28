@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sently MVP</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sently</h1>
+      <p>Organiza eventos, chatea y envía regalos con apertura programada.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Crear evento</h2>
+        <form id="event-form">
+          <label>
+            Título
+            <input type="text" name="title" required />
+          </label>
+          <label>
+            Fecha y hora
+            <input type="datetime-local" name="dateTime" required />
+          </label>
+          <label>
+            Lugar
+            <input type="text" name="location" />
+          </label>
+          <label>
+            Anfitrión
+            <input type="text" name="hostName" />
+          </label>
+          <label>
+            Descripción
+            <textarea name="description" rows="3"></textarea>
+          </label>
+          <button type="submit">Crear evento</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Eventos activos</h2>
+        <div id="events"></div>
+      </section>
+
+      <section class="card">
+        <h2>Enviar regalo programado</h2>
+        <form id="gift-form">
+          <label>
+            Evento
+            <select name="eventId" required></select>
+          </label>
+          <label>
+            Remitente
+            <input type="text" name="sender" required />
+          </label>
+          <label>
+            Destinatario
+            <input type="text" name="recipient" required />
+          </label>
+          <label>
+            URL del regalo (ej. entrada digital)
+            <input type="url" name="assetUrl" />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="note" rows="2"></textarea>
+          </label>
+          <label>
+            Apertura
+            <input type="datetime-local" name="openAt" required />
+          </label>
+          <button type="submit">Enviar regalo</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Adjuntar archivo</h2>
+        <form id="attachment-form" enctype="multipart/form-data">
+          <label>
+            Evento
+            <select name="eventId" required></select>
+          </label>
+          <label>
+            Archivo
+            <input type="file" name="file" required />
+          </label>
+          <button type="submit">Subir archivo</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
