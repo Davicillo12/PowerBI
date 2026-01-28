@@ -9,12 +9,23 @@
   <body>
     <header>
       <h1>Sently</h1>
-      <p>Organiza eventos, chatea y envía regalos con apertura programada.</p>
+      <p>
+        Organiza celebraciones con calma: invita, confirma asistencia, conversa y entrega
+        regalos que se abren en el momento perfecto.
+      </p>
+      <div class="header-tags">
+        <span class="tag">Eventos familiares</span>
+        <span class="tag">Regalos seguros</span>
+        <span class="tag">Conversaciones claras</span>
+      </div>
     </header>
 
     <main>
       <section class="card">
         <h2>Crear evento</h2>
+        <p class="card-subtitle">
+          Define la fecha, el lugar y los detalles para que todos estén en la misma página.
+        </p>
         <form id="event-form">
           <label>
             Título
@@ -42,11 +53,17 @@
 
       <section class="card">
         <h2>Eventos activos</h2>
+        <p class="card-subtitle">
+          Consulta rápidamente lo que viene y mantén el control de tus planes.
+        </p>
         <div id="events"></div>
       </section>
 
       <section class="card">
         <h2>Enviar regalo programado</h2>
+        <p class="card-subtitle">
+          Envía entradas, tarjetas o mensajes que solo se abrirán en la fecha elegida.
+        </p>
         <form id="gift-form">
           <label>
             Evento
@@ -78,6 +95,9 @@
 
       <section class="card">
         <h2>Adjuntar archivo</h2>
+        <p class="card-subtitle">
+          Comparte fotos, documentos o música relacionados con el evento.
+        </p>
         <form id="attachment-form" enctype="multipart/form-data">
           <label>
             Evento
